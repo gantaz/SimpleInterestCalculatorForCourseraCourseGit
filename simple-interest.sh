@@ -1,13 +1,28 @@
+   #!/bin/bash
+   # This script calculates simple interest given principal,
+   # annual rate of interest and time period in years.
 
-## Contribuir
+   # Do not use this in production. Sample purpose only.
 
-¡Gracias por tu interés en contribuir al proyecto! Si deseas contribuir, sigue estos pasos:
+   # Author: Upkar Lidder (IBM)
+   # Additional Authors:
+   # <your GitHub username>
 
-1. Abre un problema para discutir las ideas de tu contribución.
-2. Realiza tus cambios en una nueva rama.
-3. Envía una solicitud de extracción.
+   # Input:
+   # p, principal amount
+   # t, time period in years
+   # r, annual rate of interest
 
-## Licencia
+   # Output:
+   # simple interest = p*t*r
 
-Este proyecto está licenciado bajo la Licencia Apache 2.0. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+   echo "Enter the principal:"
+   read p
+   echo "Enter rate of interest per year:"
+   read r
+   echo "Enter time period in years:"
+   read t
 
+   s=`expr $p \* $t \* $r / 100`
+   echo "The simple interest is: "
+   echo $s
